@@ -1,0 +1,23 @@
+﻿@model APIMVC.Models.Datum
+
+@{
+    ViewData["Title"] = "Details";
+}
+<div class="overlay mt-5">
+<div class="back">
+        <a asp-action="List"> <i class="fa-solid fa-caret-left"></i> Back to List</a>
+</div>
+<div class="text-center pt-5 mt-5">
+    <div class="info col-md-4">
+        <h1>@Html.DisplayFor(model => model.first_name) @Html.DisplayFor(model => model.last_name)</h1>
+        <img src="@Model.avatar" width="350" />
+            <p class="mt-4">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
+               At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div class="email-btn col-md-4 mt-5">
+        <a href="mailto:@Model.email" class="btn">Contact</a>
+    </div>
+</div>
+</div>
+
+

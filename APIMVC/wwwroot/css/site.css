@@ -1,0 +1,311 @@
+@font-face {
+    font-family: "Poppins";
+    src: url("/css/Poppins/Poppins-Light.ttf");
+}
+
+
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: #101E29;
+    color: #F4F4FC;
+    text-shadow: 0.5px 0.5px 2px black;
+    background-color: #101E29;
+    font-family: Poppins;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.home {
+    position: fixed;
+    /*top: 0;*/
+    top: 50px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    /*object-fit:cover;*/
+    width: 100%;
+    height: 130%;
+    transform: translate(-50%, -6%);
+    /*    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;*/
+    /*object-fit:cover;*/
+    z-index: -1;
+}
+
+.overlay {
+    text-align: center;
+    z-index: 999;
+    color: white;
+    text-shadow: 0 0 15px #6BB6DD;
+}
+
+/*COLORS:
+    Whiteish: #F4F4FC
+    lightblur: #95ACBE
+    Blue: #2C597E
+    DarkBlue 1: #132536
+    DarkBlue 2: #16293C
+    DarkestBlue= #101E29
+    DarkGrey: #21242C
+*/
+
+nav, footer, footer a {
+    background-color: black;
+    text-decoration: none;
+    color: white;
+}
+
+    footer a:hover {
+        color: #2C597E;
+    }
+
+li:hover {
+    background-color: #21242C;
+}
+
+.card {
+    min-width: 200px;
+    height: 400px;
+    box-shadow: 5px 5px 15px black;
+    color: #F4F4FC;
+    text-shadow: 0.5px 0.5px 1px #21242C;
+    background: linear-gradient(45deg, #F4F4FC, #2C597E, #16293C, #21242C,#16293C, #2C597E, #F4F4FC, #2C597E, #16293C);
+}
+
+    .card img {
+        margin: auto;
+        border: 2px solid black;
+    }
+
+.color-card {
+    min-width: 200px;
+    max-width: 320px;
+    height: 400px;
+    text-transform: uppercase;
+}
+
+
+.partners {
+    margin: 1em;
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+    font-weight: 800;
+    box-shadow: 0 0 20px #6BB6DD;
+    border: 0.5em double #6BB6DD;
+    background-color: #101E29;
+    color: white;
+    animation: colorChange 2s infinite;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    box-shadow: 1px 5px 20px black;
+    z-index: 1;
+    overflow: scroll;
+    max-height: 600px;
+    width: 400px;
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .partners {
+    background-color: white;
+    animation: none;
+    color: #101E29;
+}
+
+@keyframes colorChange {
+    0% {
+        box-shadow: 0 0 20px #6BB6DD;
+        color: #6BB6DD;
+    }
+
+    50% {
+        box-shadow: 0 0 20px white;
+        color: white;
+    }
+
+    100% {
+        box-shadow: 0 0 20px #6BB6DD;
+        color: #6BB6DD;
+    }
+}
+
+
+
+    .dropdown-content a {
+        text-decoration: none;
+        color: white;
+    }
+    .dropdown-content a:hover {
+        text-shadow: 0px 0px 10px white;
+    }
+
+ul {
+    list-style-type: none;
+}
+
+
+
+.mailto a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #95ACBE;
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-shadow: 1px 1px 2px black;
+}
+
+    .mailto a:hover {
+        letter-spacing: 0.4em;
+    }
+
+.info {
+    margin: auto;
+}
+
+    .info img {
+        border: 4px solid black;
+    }
+
+.email-btn {
+    background: linear-gradient(45deg, #F4F4FC, #2C597E, #16293C, #21242C,#16293C, #2C597E, #F4F4FC, #2C597E, #16293C);
+    width: 10em;
+    height: 3em;
+    margin: auto;
+    position: relative;
+    animation: gradient 40s ease infinite;
+}
+
+    .email-btn::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        background: inherit;
+        filter: blur(12px);
+    }
+
+    .email-btn .btn {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: black;
+        width: 9em;
+        height: 2.6em;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        font-size: 1.1em;
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+        z-index: 1;
+        transition: background-color 0.5s, color 0.5s;
+        border-radius: unset;
+    }
+
+    .email-btn:hover::before {
+        opacity: 1;
+    }
+
+    .email-btn:hover .btn {
+        background-color: #F4F4FC;
+        color: #2C597E;
+    }
+
+@keyframes gradient {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 100em 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.back {
+    position: absolute;
+    margin-top: 40px;
+}
+
+    .back a {
+        text-decoration: none;
+        color: #2C597E;
+        text-shadow: 0.1px 0.1px 2px black;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 0.2em;
+        padding: 0.5em;
+    }
+
+        .back a:hover {
+            letter-spacing: 0.25em;
+            background-color: #16293C;
+        }
+
+.sun {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 2em;
+    margin-bottom: 2em;
+}
+
+    .sun h2 {
+        font-weight: 600;
+        letter-spacing: 0.1em;
+        text-shadow: 1px 1px 10px white;
+    }

@@ -1,0 +1,23 @@
+﻿@model APIMVC.Models.Sun
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@* <div class="text-center home">
+    <img src="~/css/RNCity.jpg" />
+    <h1 class="display-4">Welcome to RN Tech</h1>
+</div> *@
+<div class="home">
+    <img src="~/css/RNCity.jpg" class="background-image" />
+    <div class="text-center overlay mt-3">
+        @* <h1 class="display-4">Welcome to RN Tech</h1> *@
+        <h4>@Html.DisplayFor(modelitem => modelitem.setup) </h4>
+        <h3>@Html.DisplayFor(modelitem => modelitem.punchline) </h3>
+    </div>
+</div>
+<div class="sun">
+    <h2>STHLM</h2>
+    <h5>@Html.DisplayFor(modelitem => modelitem.results.sunrise) <i class="fa-regular fa-sun"></i></h5>
+    <h5>@Html.DisplayFor(modelitem => modelitem.results.sunset) <i class="fa-regular fa-moon"></i></h5>
+</div>

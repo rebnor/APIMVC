@@ -1,0 +1,43 @@
+﻿@model List<string>
+
+@{
+    ViewData["Title"] = "ListPartners";
+}
+<div class="overlay mt-5 pt-5">
+@if (Model != null)
+{
+
+
+        <h1>Partners</h1>
+
+        @foreach (var letter in "ABCDEFGHIJKLMNOPQRSTUVWXYZ")
+        {
+            var filteredItems = Model.Where(item => item.StartsWith(letter.ToString(), StringComparison.OrdinalIgnoreCase));
+            if (filteredItems.Any())
+            {
+                <div class="dropdown">
+                    <button class="partners"><h1>@letter</h1></button>
+                    <div class="dropdown-content">
+                        <ul>
+                        @foreach (var item in filteredItems)
+                        {
+                           
+                                <li>
+                                    
+                                    <a href="https://@item" target="_blank">@item</a>
+                                </li>
+                            
+                        }
+                        </ul>
+                    </div>
+                </div>
+            }
+        }
+
+}
+else
+{
+    <h1>Something went wrong.</h1>
+    <p>We are working on it!</p>
+}
+</div>

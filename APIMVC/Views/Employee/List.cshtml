@@ -1,0 +1,36 @@
+﻿@model List<APIMVC.Models.Datum>
+
+@{
+    ViewData["Title"] = "List";
+}
+<div class="overlay mt-5 pt-5">
+@if (Model != null)
+{
+        <h1>Employees</h1>
+    <div class="row text-center">
+
+        @foreach (var item in Model)
+        {
+            <div class="col-md-4">
+                <div class="card p-3 m-4">
+                   
+                    <img src="@item.avatar" width="200" /> 
+
+                    <h4 class="card-title">@Html.DisplayFor(modelItem => item.first_name) @Html.DisplayFor(modelItem => item.last_name)</h4>
+
+                        <p class="fst-italic">"@Html.DisplayFor(modelItem => item.message)"</p>
+
+                    <p class="mailto mt-2">@Html.ActionLink("Contact Me", "Contact", new { id = item.id })</p>
+            
+                </div>
+            </div>
+        }
+
+    </div>
+ 
+}
+else
+{
+    <h1>No employees found</h1>
+}
+</div>
